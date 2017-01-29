@@ -12,7 +12,7 @@ public class DriveSequence extends CommandGroup {
     public DriveSequence() {
     
     	addSequential(new AutoDriveCommand(0, -0.5, -200));
-    	addSequential(new AutoDriveCommand(-0.5, 0, -50));
+    	addSequential(new AutoDriveCommand(0.5, 0, -50));
     	addSequential(new AutoDriveCommand(0, 0.5, -5));
 
         // Add Commands here:

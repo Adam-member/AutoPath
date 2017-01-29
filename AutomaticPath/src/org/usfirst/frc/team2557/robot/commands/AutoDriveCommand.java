@@ -4,6 +4,7 @@ import org.usfirst.frc.team2557.robot.Robot;
 import org.usfirst.frc.team2557.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  *
@@ -30,12 +31,15 @@ public class AutoDriveCommand extends Command {
     }
 
     // Called repeatedly when this Command is scheduled to run
-    protected void execute() {   	
+    protected void execute() {   
     	Robot.autoSubsystem.setDistances(x, y, z);
-    	if(RobotMap.backLeft.getEncPosition() >= z){
+    	if(RobotMap.backLeft.getEncPosition() <= z){
     		truefalse = true;
     	}
-    }
+    		}
+    		
+    	
+    
     	
     
 

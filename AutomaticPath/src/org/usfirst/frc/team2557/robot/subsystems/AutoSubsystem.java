@@ -25,15 +25,13 @@ public class AutoSubsystem extends Subsystem {
 	public void setDistances(double x, double y, double z){
 		RobotMap.backLeft.setEncPosition(0);
 		RobotMap.backRight.setEncPosition(0);
-		while(/*RobotMap.backRight.getEncPosition() <= z &&*/ RobotMap.backLeft.getEncPosition() >= z){
-			RobotMap.robotDrive.arcadeDrive(x,y);
+		if(/*RobotMap.backRight.getEncPosition() <= z &&*/ RobotMap.backLeft.getEncPosition() >= z){
+			RobotMap.robotDrive.arcadeDrive(x, y);
 			SmartDashboard.putNumber("encoderCount", RobotMap.backLeft.getEncPosition());
 		}
-		while(/*RobotMap.backRight.getEncPosition() >= z &&*/ RobotMap.backLeft.getEncPosition() <= z){
-			RobotMap.robotDrive.arcadeDrive(0,0);
-			break;
+		
 	}
-	}
+	
 	
     
     // Put methods for controlling this subsystem
