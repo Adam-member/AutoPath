@@ -100,6 +100,7 @@ public class Robot extends IterativeRobot {
 	 */
     public void autonomousInit() {
     	//autoCommand.start();
+    	RobotMap.backLeft.setEncPosition(0);
     	DriveSequence.start();
         autonomousCommand = (Command) chooser.getSelected();
         
