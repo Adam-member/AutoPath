@@ -26,7 +26,6 @@ public class AutoDriveCommand extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	RobotMap.backLeft.setEncPosition(0);
 
     }
 

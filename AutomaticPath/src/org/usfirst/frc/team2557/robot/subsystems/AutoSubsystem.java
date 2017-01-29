@@ -31,7 +31,8 @@ public class AutoSubsystem extends Subsystem {
 		}
 		while(/*RobotMap.backRight.getEncPosition() >= z &&*/ RobotMap.backLeft.getEncPosition() <= z){
 			RobotMap.robotDrive.arcadeDrive(0,0);
-		}
+			break;
+	}
 	}
 	
     
