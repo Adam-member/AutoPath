@@ -27,13 +27,16 @@ public class AutoDriveCommand extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
+    	while(RobotMap.backLeftEnc >= z){
+    		RobotMap.robotDrive.arcadeDrive(x,y);
+    	}
 
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {   
-    	Robot.autoSubsystem.setDistances(x, y, z);
-    	if(RobotMap.backLeft.getEncPosition() <= z){
+    	while(RobotMap.backLeftEnc <= z){
+    		RobotMap.robotDrive.arcadeDrive(0,0);
     		truefalse = true;
     	}
     		}

@@ -62,6 +62,9 @@ public class RobotMap {
 	public static double briefSave;
 	
 	
+	public static double backLeftEnc;
+	
+	
 	public static void init(){
 		frontLeft = new CANTalon(7);
 		frontRight = new CANTalon(8);
